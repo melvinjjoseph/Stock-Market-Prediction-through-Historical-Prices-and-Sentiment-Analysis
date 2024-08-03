@@ -1,17 +1,29 @@
-# Stock Market Prediction using Historical Data and Sentiment Analysis
+# Enhancing Stock Market Prediction through Historical Prices and Sentiment Analysis: A Deep Learning Approach
 
-![Stock_Market_Architecture](https://github.com/n1haldev/TDL-Project/assets/97780641/5bffe33e-c1dc-453a-8ef8-2637913ee8e5)
+## Overview
+This project uses an approach for stock market prediction leveraging historical price data and sentiment analysis of news headlines. We propose a model that integrates Long Short-Term Memory (LSTM) neural networks with sentiment analysis to forecast stock price movements. Our methodology involves scraping relevant news articles, extracting sentiment features, and combining them with historical price data for stocks and training the LSTM model. Results indicate promising predictive performance, demonstrating the efficiency of our approach in capturing the relationship between news sentiment and stock price dynamics.
 
-The model is going to take in data from two data pipelines namely the historical data pipeline and the stock market news data for sentiment analysis data pipeline. 
+![image](https://github.com/user-attachments/assets/a476cbd9-f89b-4857-b00f-44015638ba28)
 
-## To Code:
-The programs to be written are:
-1. VMD.py - Variation Mode decomposition decomposes the historical data and helps find hidden patterns. This can help the LSTM.py learn the trend, seasonal and cylic component better.
-2. Scraper.py - This is a file that will either scrape textual data from a news website given the time or we can alternateively explore the use of APIs for better information retreival.
-3. Combiner.py - The program combines the historical data and sentiment analysis data into a single date-time related dataset. This will help the model better understand not just the patterns of historical prices but also how emotions have effected the prices of stocks.
-4. LSTM.py - The final model that will understand the dataset produced by the Combiner.py and make stock price predictions.
+## Features
 
-## Components Recycled
-Existing Models that will be used:
-1. Text Summarization Model - There are many models in huggingface and langchain that can be made use of to reduce the size of the textual data received by the Scraper.py. (Essentially Minimal loss compression)
-2. RoBERTa Model - There are other models for sentiment analysis but I liked this model (based on complete whim tho). This will take in the summarized data and output the emotion in the aspect of stock market. (positive, negative, neutral)
+- Integration of LSTM neural networks for sequential data analysis.
+- Sentiment analysis of news headlines to gauge market sentiment.
+- Comprehensive dataset creation from historical stock prices and news articles.
+
+## Methodology
+
+1. **Data Acquisition**: 
+   - Historical stock prices are retrieved using the Yahoo Finance API.
+   - Relevant news articles are scraped from reputable sources to gather sentiment data.
+
+2. **Data Preprocessing**: 
+   - News headlines are refined using advanced natural language processing techniques to extract sentiment features.
+   - A unified dataset is created by combining historical price data with sentiment features.
+
+3. **Model Training**: 
+   - The LSTM neural network is trained on the cohesive dataset to learn the complex interplay between historical prices and market sentiment.
+
+4. **Evaluation**: 
+   - The model's performance is evaluated using metrics such as Root Mean Square Error (RMSE) and accuracy.
+
